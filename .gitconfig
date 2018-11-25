@@ -1,0 +1,13 @@
+[user]
+    name = zhenggang.qiu
+    email = changmuqiu@gmail.com
+[color]
+    ui = true
+[alias]
+    st = status
+    cm = commit
+    unstage = reset HEAD
+    co = checkout
+    br = branch
+
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
