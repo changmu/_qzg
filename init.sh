@@ -21,6 +21,9 @@ alias ll='ls -lah'
 alias up='git cm -am "auto save and push"; g push'
 alias aup='git add .; up'
 alias gcm='git pull && cmake .. && make -j4'
+alias m="cd $BASE_MYAPI_PATH"
+alias p="cd $BASE_PROTOLIB_PATH"
+alias .q="cd $HOME/.qzg"
 
 ##############################################################################
 # config

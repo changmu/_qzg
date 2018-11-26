@@ -3,8 +3,6 @@
 # set -x
 set -e # 有错误则退出
 
-
-
 ### 下载配置
 if test $# = 0; then
     if [ -d $HOME/.qzg ]; then
@@ -16,7 +14,7 @@ if test $# = 0; then
     repo_url='https://github.com/changmu/_qzg.git'
     my_name=`whoami`
     if [ $my_name = "zhenggang.qiu" ] || [ $my_name = "user_00" ]; then
-        repo_url='https://git.yingzhongtong.com/zhenggang.qiu/_qzg.git'
+        repo_url='git@git.yingzhongtong.com:zhenggang.qiu/_qzg.git'
     fi
     echo repo_url is [$repo_url]
 
