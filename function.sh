@@ -36,5 +36,9 @@ function RegistConfig() {
 
     # 注册shell配置
     echo "$regist_cmd_str" >> $shell_rc_path
+
+    # 重新加载shell配置
+    source $shell_rc_path
+
     echo regist config done.
 }
