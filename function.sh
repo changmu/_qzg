@@ -24,7 +24,6 @@ function RegistConfig() {
 
     # 判断shell配置是否已经注册
     result=`grep "$regist_cmd_str" $shell_rc_path` || true
-    echo result is [$result]
     regist_check=${result:-false}
     echo regist_check is [$regist_check]
     if [ "$regist_check" = false ]; then

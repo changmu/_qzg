@@ -1,4 +1,5 @@
 #!/bin/bash
+# usage: 
 # set -x
 set -e # 有错误则退出
 
@@ -12,7 +13,7 @@ echo repo_url is [$repo_url]
 
 ### 下载配置
 if [ -d $HOME/.qzg ]; then
-    echo done.
+    echo "$HOME/.qzg exists."
     exit 0
 fi
 
