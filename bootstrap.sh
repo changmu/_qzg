@@ -1,27 +1,31 @@
 #!/bin/bash
-# usage: 
+# usage: ./bootstrap.sh [local]
 # set -x
 set -e # 有错误则退出
 
-# 配置远程仓库地址
-repo_url='https://github.com/changmu/_qzg.git'
-my_name=`whoami`
-if [ $my_name = "zhenggang.qiu" ] || [ $my_name = "user_00" ]; then
-    repo_url='https://git.yingzhongtong.com/zhenggang.qiu/_qzg.git'
-fi
-echo repo_url is [$repo_url]
+
 
 ### 下载配置
-if [ -d $HOME/.qzg ]; then
-    echo "$HOME/.qzg exists."
-    exit 0
-fi
+if test $# = 0; then
+    if [ -d $HOME/.qzg ]; then
+        echo "$HOME/.qzg exists."
+        exit 0
+    fi
 
-cd /tmp
-rm -rf _qzg
-git clone $repo_url
-rm -rf _qzg/.git
-mv _qzg $HOME/.qzg
+    # 配置远程仓库地址
+    repo_url='https://github.com/changmu/_qzg.git'
+    my_name=`whoami`
+    if [ $my_name = "zhenggang.qiu" ] || [ $my_name = "user_00" ]; then
+        repo_url='https://git.yingzhongtong.com/zhenggang.qiu/_qzg.git'
+    fi
+    echo repo_url is [$repo_url]
+
+    cd /tmp
+    rm -rf _qzg
+    git clone $repo_url
+    rm -rf _qzg/.git
+    mv _qzg $HOME/.qzg
+fi
 
 ### 安装配置
 cd $HOME/.qzg

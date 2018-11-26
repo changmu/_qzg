@@ -8,5 +8,5 @@
 ```
 2.在本地将配置推到远程
 ```sh
-    scp bootstrap.sh remote_host:/tmp && ssh remote_host 'cd /tmp && ./bootstrap.sh'
+    ./scp_bootstrap.sh remote_host
 ```

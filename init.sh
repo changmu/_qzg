@@ -27,9 +27,9 @@ alias gcm='git pull && cmake .. && make -j4'
 ##############################################################################
 ulimit -c unlimited
 # link if not exist
-ln -s $HOME/.qzg/.gitconfig $HOME/.gitconfig || true
-ln -s $HOME/.qzg/.vimrc $HOME/.vimrc || true
-ln -s $HOME/.qzg/.dircolors $HOME/.dircolors || true
+ln -s $HOME/.qzg/.gitconfig $HOME/.gitconfig &> /dev/null || true
+ln -s $HOME/.qzg/.vimrc $HOME/.vimrc &> /dev/null || true
+ln -s $HOME/.qzg/.dircolors $HOME/.dircolors &> /dev/null || true
 
 
 ##############################################################################
