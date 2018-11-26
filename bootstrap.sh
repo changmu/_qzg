@@ -12,11 +12,6 @@ if test $# = 0; then
 
     # 配置远程仓库地址
     repo_url='https://github.com/changmu/_qzg.git'
-    my_name=`whoami`
-    if [ $my_name = "zhenggang.qiu" ] || [ $my_name = "user_00" ]; then
-        repo_url='git@git.yingzhongtong.com:zhenggang.qiu/_qzg.git'
-    fi
-    echo repo_url is [$repo_url]
 
     cd /tmp
     rm -rf _qzg
