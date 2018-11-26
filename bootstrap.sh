@@ -2,9 +2,11 @@
 # set -x
 set -e # 有错误则退出
 
+repo_url='git@github.com:changmu/_qzg.git'
+
 ### 下载配置
 cd /tmp
-git clone git@github.com:changmu/.qzg.git
+git clone $repo_url
 rm -rf .qzg/.git
 mv .qzg $HOME
 
