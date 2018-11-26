@@ -8,5 +8,5 @@
 ```
 方法2: 在本地将配置推到远程
 ```sh
-    ./scp_bootstrap.sh remote_host
+    ./scp_bootstrap.sh remote_host[s]
 ```
