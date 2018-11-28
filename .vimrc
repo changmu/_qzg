@@ -1,4 +1,4 @@
-﻿set mouse=a
+﻿"set mouse=a
 "set background=dark
 set background=light
 "colorscheme elflord
