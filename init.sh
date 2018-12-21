@@ -10,6 +10,8 @@ export BASE_3PARTY_PATH="$HOME/.git/3party"
 export BASE_MYAPI_PATH="$HOME/.git/myapi"
 export BASE_PROTOLIB_PATH="$HOME/.git/protolib"
 export BASE_LOAN_PATH="$HOME/credit_backend"
+# 允许命令行输入git账号
+export GIT_TERMINAL_PROMPT=1
 
 ##############################################################################
 # alias
