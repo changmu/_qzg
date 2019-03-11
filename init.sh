@@ -9,6 +9,8 @@ source $HOME/.qzg/function.sh
 export PATH=/bin:$PATH
 # 允许命令行输入git账号
 export GIT_TERMINAL_PROMPT=1
+# 添加go代理
+export GOPROXY=https://goproxy.io
 
 ##############################################################################
 # alias
