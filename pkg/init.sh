@@ -24,6 +24,8 @@ alias aup='git add .; up'
 alias gcm='git pull && cmake .. && make -j4'
 alias .q="cd $HOME/.qzg"
 
+alias qrename="$HOME/.qzg/tools/qrename.sh"
+
 ##############################################################################
 # config
 ##############################################################################
