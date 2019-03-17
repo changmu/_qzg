@@ -16,7 +16,7 @@ for remote_host in $@; do
         ssh ${remote_host} 'rm -rf /tmp/_qzg'
         ssh ${remote_host} 'mkdir /tmp/_qzg'
         scp -r pkg ${remote_host}:/tmp/_qzg
-        scp -r bootstrap.sh ${remote_host}:/tmp/_qzg
-        ssh ${remote_host} 'cd /tmp/_qzg && ./bootstrap.sh local'
+        scp *.sh ${remote_host}:/tmp/_qzg
+        ssh ${remote_host} 'cd /tmp/_qzg && ./install_local.sh'
     } &
 done

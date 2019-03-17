@@ -52,24 +52,3 @@ function RegistConfig() {
 
     echo regist config done.
 }
-
-### 下载配置
-if test $# = 0; then # 用于URL在线覆盖安装
-    # 配置远程仓库地址
-    repo_url='https://github.com/changmu/_qzg.git'
-
-    cd /tmp
-    rm -rf _qzg
-    git clone $repo_url
-    cd _qzg
-    InstallConfig
-elif test $1 = "local"; then
-    InstallConfig
-fi
-
-### 安装配置
-cd $HOME/.qzg # 确保该目录存在
-# 注册配置
-RegistConfig 'source $HOME/.qzg/init.sh'
-
-echo "$0 done."
