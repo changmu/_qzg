@@ -6,9 +6,10 @@ set -e # 有错误则退出
 # 导入函数
 source common_functions.sh
 
-### 安装配置
+# 安装
 InstallConfig
-# 注册配置
+
+# 注册
 cd $HOME/.qzg # 确保该目录存在
 RegistConfig 'source $HOME/.qzg/init.sh'
 

@@ -6,7 +6,7 @@ set -e # 有错误则退出
 function InstallConfig() {
     echo "installing config ..."
     rm -rf $HOME/.qzg
-    cp -r pkg $HOME/.qzg
+    cp -r .qzg $HOME/.qzg
 }
 
 function RegistConfig() {

@@ -12,10 +12,12 @@ for remote_host in $@; do
 
     # 并发执行代码块
     {
+        # 上传
         ssh ${remote_host} 'rm -rf /tmp/_qzg'
         ssh ${remote_host} 'mkdir /tmp/_qzg'
-        scp -r pkg ${remote_host}:/tmp/_qzg
+        scp -r .qzg ${remote_host}:/tmp/_qzg
         scp *.sh ${remote_host}:/tmp/_qzg
+        # 安装, 注册
         ssh ${remote_host} 'cd /tmp/_qzg && ./install_local.sh'
     } &
 done
