@@ -1,7 +1,6 @@
 #!/bin/bash
 # usage: ./scp_bootstrap.sh d c11 t t193 m ol ol93
 set -e
-set -x
 
 if [ $# = 0 ]; then
     echo need remote_host[s]
