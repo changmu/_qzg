@@ -4,7 +4,7 @@
 set -e # 有错误则退出
 
 # 导入函数
-source common_functions.sh
+source utils.sh
 
 # 安装
 InstallConfig
