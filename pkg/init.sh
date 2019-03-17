@@ -3,7 +3,7 @@
 ##############################################################################
 # env
 ##############################################################################
-export PATH=/bin:$PATH
+export PATH=/bin:$PATH:$HOME/.qzg/tools
 # 允许命令行输入git账号
 export GIT_TERMINAL_PROMPT=1
 # 添加go代理
@@ -23,8 +23,6 @@ alias up='git cm -am "auto save and push"; g push'
 alias aup='git add .; up'
 alias gcm='git pull && cmake .. && make -j4'
 alias .q="cd $HOME/.qzg"
-
-alias qrename="$HOME/.qzg/tools/qrename.sh"
 
 ##############################################################################
 # config
