@@ -14,7 +14,6 @@ export ETCDCTL_API=3
 # alias
 ##############################################################################
 alias lb='GOOS=linux GOARCH=amd64 go build'
-alias work='cd ~/Documents/work/work/'
 alias s='ssh'
 alias vi='vim'
 alias g='git'
