@@ -8,6 +8,7 @@ export PATH=/bin:$PATH:$HOME/.qzg/tools
 export GIT_TERMINAL_PROMPT=1
 # 添加go代理
 export GOPROXY=https://goproxy.io
+# etcd版本
 export ETCDCTL_API=3
 
 ##############################################################################
