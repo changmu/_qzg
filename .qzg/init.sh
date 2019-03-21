@@ -14,6 +14,10 @@ export ETCDCTL_API=3
 ##############################################################################
 # alias
 ##############################################################################
+alias mkcd='f(){mkdir -p $1 && cd $1}; f'
+alias svi='sudo vim'
+alias ..='cd ..'
+alias ...='cd ..; cd ..'
 alias gf='gofmt -w .'
 alias gb='gf && go build'
 alias lb='GOOS=linux GOARCH=amd64 go build'
