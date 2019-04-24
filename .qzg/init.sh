@@ -3,7 +3,7 @@
 ##############################################################################
 # env
 ##############################################################################
-export LANG="en_US.UTF-8"
+export LANG="zh_CN.UTF-8"
 export PATH=/bin:$PATH:$HOME/.qzg/tools
 # 允许命令行输入git账号
 export GIT_TERMINAL_PROMPT=1
