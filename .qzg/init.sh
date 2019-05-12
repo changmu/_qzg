@@ -43,6 +43,7 @@ ulimit -c unlimited
 ln -s $HOME/.qzg/.gitconfig $HOME/.gitconfig &> /dev/null || true
 ln -s $HOME/.qzg/.vimrc $HOME/.vimrc &> /dev/null || true
 ln -s $HOME/.qzg/.dircolors $HOME/.dircolors &> /dev/null || true
+ln -s $HOME/.qzg/.tmux.conf $HOME/.tmux.conf &> /dev/null || true
 
 
 ##############################################################################
