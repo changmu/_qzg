@@ -58,6 +58,7 @@ function RegistConfig() {
 ### 下载
 # 配置远程仓库地址
 repo_url='https://github.com/changmu/_qzg.git'
+cd ~
 rm -rf _qzg
 git clone $repo_url
 
@@ -67,5 +68,6 @@ InstallConfig
 
 # 注册
 RegistConfig 'source $HOME/.qzg/init.sh'
+cd ~
 rm -rf _qzg
 echo "$0 done."
