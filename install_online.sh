@@ -1,5 +1,6 @@
 #!/bin/bash
-# usage: ./online_bootstrap.sh
+# 给新机器安装配置使用
+# usage: sh -c "$(curl -fsSL https://raw.githubusercontent.com/changmu/_qzg/master/install_online.sh)"
 # set -x
 set -e # 有错误则退出
 

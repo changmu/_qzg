@@ -1,5 +1,5 @@
 #!/bin/bash
-# usage: ./bootstrap.sh [local]
+# usage: ./install_local.sh [local]
 # set -x
 set -e # 有错误则退出
 

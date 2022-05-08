@@ -1,5 +1,6 @@
 #!/bin/bash
-# usage: ./scp_bootstrap.sh d c11 t t193 m ol ol93
+# 用于批量给远程机器安装配置
+# usage: ./install_scp.sh d c11 t t193 m ol ol93
 set -e
 
 if [ $# = 0 ]; then
