@@ -36,6 +36,7 @@ alias up='git cm -am "--other=auto save and push"; g push'
 alias aup='git add .; up'
 alias gcm='git pull && cmake .. && make -j4'
 alias .q="cd $HOME/.qzg"
+alias h=hexo
 
 ##############################################################################
 # config
