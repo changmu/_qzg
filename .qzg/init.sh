@@ -52,3 +52,12 @@ ln -s $HOME/.qzg/.tmux.conf $HOME/.tmux.conf &> /dev/null || true
 # tools
 ##############################################################################
 source $HOME/.qzg/z.sh
+
+# 给本地和远程仓库打tag
+function gt() {
+	if [ $# == 0 ]; then
+		echo 'need tag name'
+		exit 1
+	fi	
+	git tag $1; gt tag push origin $1;
+}
