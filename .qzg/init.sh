@@ -55,9 +55,10 @@ source $HOME/.qzg/z.sh
 
 # 给本地和远程仓库打tag
 function gt() {
-	if [ $# == 0 ]; then
-		echo 'need tag name'
-		exit 1
+	if test $# != 1; then
+		echo "$0 need tag name"
+		return 1
 	fi	
-	git tag $1; gt tag push origin $1;
+	git tag $1;
+	git push origin $1;
 }
