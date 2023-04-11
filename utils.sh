@@ -25,6 +25,16 @@ function RegistConfig() {
     shell_rc_path=$HOME/'.'`basename $SHELL`rc # .bashrc .zshrc
     echo shell_rc_path is [$shell_rc_path]
 
+    # 如果是windows，需要添加几个文件
+    if [ "$(uname)" = "Darwin" ]; then
+   	  echo 'Mac OS X 操作系统'
+   	elif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
+   	  echo 'GNU/Linux操作系统'
+   	elif [ "$(expr substr $(uname -s) 1 10)"="MINGW32_NT" ]; then
+   	  echo 'Windows NT操作系统'
+   	  touch ~/.bashrc ~/.bash_profile ~/.bash_login ~/.profile
+    fi
+
     # 检查shell配置是否存在
     if [ ! -f $shell_rc_path ]; then
         echo file [$shell_rc_path] not exist.
