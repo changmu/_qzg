@@ -14,6 +14,12 @@ export GIT_TERMINAL_PROMPT=1
 export GOPROXY=https://proxy.golang.com.cn,direct
 # etcd版本
 export ETCDCTL_API=3
+# 如果是linux，则设置提示符颜色
+if [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
+    PS1="\[\e[01;32m\]\u@\h: \W \$\[\e[00m\] "
+    export PS1
+fi
+
 
 ##############################################################################
 # alias
@@ -56,10 +62,10 @@ source $HOME/.qzg/z.sh
 
 # 给本地和远程仓库打tag
 function gt() {
-	if test $# != 1; then
-		echo "$0 need tag name"
-		return 1
-	fi	
-	git tag $1;
-	git push origin $1;
+    if test $# != 1; then
+        echo "$0 need tag name"
+        return 1
+    fi	
+    git tag $1;
+    git push origin $1;
 }
