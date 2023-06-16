@@ -1,0 +1,22 @@
+
+#<type>: <subject> - <modify_description>
+
+#需求单: xxx
+#bug单: xxx
+#技术方案: xxx
+#其他资料: xxx
+
+# - type:
+#   `feature`：新功能feature
+#   `bugfix`：修复bug
+#   `optimize`：优化相关，比如提升性能、体验
+#   `docs`：仅仅修改了文档，比如 README, CHANGELOG, CONTRIBUTE等等
+#   `style`：仅仅修改了空格、格式缩进、逗号等等，不改变代码逻辑   
+#   `refactor`：代码重构，没有加新功能或者修复 bug
+#   `test`：测试用例，包括单元测试、集成测试等
+#
+# - subject
+#    提交描述: 需求/bug/优化目标 的简要描述
+#
+# - modify_description
+#    本次小改动的描述，比如: 添加日志、添加参数校验、删除无效代码
