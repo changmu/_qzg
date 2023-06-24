@@ -15,7 +15,7 @@ export GOPROXY=https://goproxy.cn
 # etcd版本
 export ETCDCTL_API=3
 # 如果是linux，则设置提示符颜色
-if [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
+if test "$(uname -s | cut -c 1-5)" = "Linux"; then
     PS1="\[\e[01;32m\]\u@\h: \W \$\[\e[00m\] "
     export PS1
 fi
