@@ -1,6 +1,8 @@
 ﻿"set mouse=a
 "set background=dark
 set background=light
+set paste " 粘贴时维持原样，不自动缩进
+set ff=unix " 行尾使用\n
 "colorscheme elflord
 set nocompatible " 关闭 vi 兼容模式
 syntax on " 自动语法高亮
