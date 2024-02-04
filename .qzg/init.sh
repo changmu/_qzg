@@ -10,7 +10,7 @@ export PATH=/bin:$PATH:$HOME/.qzg/tools
 # 允许命令行输入git账号
 export GIT_TERMINAL_PROMPT=1
 # 添加go代理
-export GOPROXY=https://goproxy.cn
+#export GOPROXY=https://goproxy.cn
 #export GOPROXY=https://proxy.golang.com.cn,direct
 # etcd版本
 export ETCDCTL_API=3
@@ -38,7 +38,7 @@ alias g='git'
 alias d='docker'
 alias tf='tail -f'
 alias ll='ls -lah'
-alias up='git cm -am "--other=auto save and push"; g push'
+alias up='git cm -am "debug"; g push'
 alias aup='git add .; up'
 alias gcm='git pull && cmake .. && make -j4'
 alias .q="cd $HOME/.qzg"
