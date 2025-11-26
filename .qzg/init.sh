@@ -43,7 +43,6 @@ alias aup='git add .; up'
 alias gcm='git pull && cmake .. && make -j4'
 alias .q="cd $HOME/.qzg"
 alias h=hexo
-alias n=npm
 
 ##############################################################################
 # config
@@ -74,4 +73,20 @@ gt() {
 git_push_upstream() {
     currentBranch=$(git branch --show-current)
     git push --set-upstream origin "$currentBranch"
+}
+
+# 下载文件
+dl() {
+    if test $# != 1; then
+        echo "$0 need filename"
+        return 1
+    fi	
+    go run console/main.go cmd_foss --cmd=StreamDownload --saveDir="./download" --fossFile=$1
+}
+upl() {
+    if test $# != 1; then
+        echo "$0 need filename"
+        return 1
+    fi	
+    go run console/main.go cmd_foss --cmd=StreamUpload --fossDir="/tmp/" --filePath=$1
 }
