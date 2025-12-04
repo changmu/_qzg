@@ -10,7 +10,7 @@ export PATH=/bin:$PATH:$HOME/.qzg/tools
 # 允许命令行输入git账号
 export GIT_TERMINAL_PROMPT=1
 # 添加go代理
-#export GOPROXY=https://goproxy.cn
+export GOPROXY=https://goproxy.cn,direct
 #export GOPROXY=https://proxy.golang.com.cn,direct
 # etcd版本
 export ETCDCTL_API=3
