@@ -1,6 +1,6 @@
 [user]
 	name = windqiu
-	email = windqiu@futunn.com
+	email = changmuqiu@gmail.com
 [color]
     ui = true
 [alias]
@@ -19,6 +19,3 @@
     template = ~/.tplCommitMsg
 [safe]
 	directory = *
-[url "git@gitlab.futunn.com:"]
-	insteadOf = http://gitlab.futunn.com/
-	insteadOf = https://gitlab.futunn.com/
