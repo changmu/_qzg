@@ -1,7 +1,7 @@
 #!/bin/bash
 # 带时间戳的 crontab 任务执行包装脚本
 
-LOG_FILE="/home/windqiu/log/crontab.log"
+LOG_FILE="$HOME/log/crontab.log"
 CMD_NAME="$1"
 shift
 
