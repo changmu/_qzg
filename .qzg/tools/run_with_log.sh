@@ -32,8 +32,11 @@ fi
 # 确保脚本退出时释放锁
 trap "rm -rf '$LOCK_PATH'" EXIT
 
+START_TIME=$(date +%s)
 echo "$(date '+%Y-%m-%d %H:%M:%S') [START] $CMD_NAME" >> "$LOG_FILE"
 "$@" >> "$LOG_FILE" 2>&1
 EXIT_CODE=$?
-echo "$(date '+%Y-%m-%d %H:%M:%S') [END] $CMD_NAME (exit: $EXIT_CODE)" >> "$LOG_FILE"
+END_TIME=$(date +%s)
+DURATION=$((END_TIME - START_TIME))
+echo "$(date '+%Y-%m-%d %H:%M:%S') [END] $CMD_NAME (exit: $EXIT_CODE, 耗时: ${DURATION}秒)" >> "$LOG_FILE"
 echo "----------------------------------------" >> "$LOG_FILE"
