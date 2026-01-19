@@ -17,7 +17,11 @@ LOCK_PATH="$LOCK_DIR/$(echo "$CMD_NAME" | tr ' ' '_').lock"
 if ! mkdir "$LOCK_PATH" 2>/dev/null; then
     # 检查锁是否过期（超过30分钟认为是僵尸锁）
     if [[ -d "$LOCK_PATH" ]]; then
-        LOCK_AGE=$(( $(date +%s) - $(stat -f %m "$LOCK_PATH") ))
+        if [[ "$(uname)" == "Darwin" ]]; then
+            LOCK_AGE=$(( $(date +%s) - $(stat -f %m "$LOCK_PATH") ))
+        else
+            LOCK_AGE=$(( $(date +%s) - $(stat -c %Y "$LOCK_PATH") ))
+        fi
         if [[ $LOCK_AGE -gt 1800 ]]; then
             echo "$(date '+%Y-%m-%d %H:%M:%S') [WARN] $CMD_NAME 清理过期锁 (${LOCK_AGE}秒)" >> "$LOG_FILE"
             rm -rf "$LOCK_PATH"
